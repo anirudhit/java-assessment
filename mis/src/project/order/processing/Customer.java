@@ -24,5 +24,11 @@ public class Customer {
 	public void deleteCustomer() {
 		System.out.println("deletecustomer method");
 	}
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", address=" + address
+				+ ", phone=" + phone + "]";
+	}
 	
 }
