@@ -22,5 +22,12 @@ public class Product {
 	public void selectProduct(int productId) {
 		System.out.println("selectProduct method");
 	}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productPrice=" + productPrice + ", productType=" + productType
+				+ "]";
+	}
+	
 	
 }
