@@ -22,4 +22,9 @@ public class Stock {
 	public void selectStockItem(int productId) {
 		System.out.println("selectStockItem method");
 	}
+
+	@Override
+	public String toString() {
+		return "Stock [productId=" + productId + ", quantity=" + quantity + ", shopNo=" + shopNo + "]";
+	}
 }
