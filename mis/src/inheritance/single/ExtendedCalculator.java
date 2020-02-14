@@ -1,7 +1,5 @@
 package inheritance.single;
 
-import java.util.Scanner;
-
 public class ExtendedCalculator extends Calculator {
 	
 	public ExtendedCalculator(int val1, int val2) {
