@@ -6,7 +6,6 @@ public class Product {
 	String productType;
 	
 	public Product(int productId, float productPrice, String productType) {
-		super();
 		this.productId = productId;
 		this.productPrice = productPrice;
 		this.productType = productType;

@@ -6,7 +6,6 @@ public class Stock {
 	int shopNo;
 	
 	public Stock(int productId, int quantity, int shopNo) {
-		super();
 		this.productId = productId;
 		this.quantity = quantity;
 		this.shopNo = shopNo;

@@ -9,7 +9,6 @@ public class Order {
 	int orderDate;
 	
 	public Order(int orderId, int customerId, String customerName, int productId, float amount, int orderDate) {
-		super();
 		this.orderId = orderId;
 		this.customerId = customerId;
 		this.customerName = customerName;
