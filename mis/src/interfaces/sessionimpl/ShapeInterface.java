@@ -2,7 +2,7 @@ package interfaces.sessionimpl;
 
 public interface ShapeInterface {
 	
-	int shapeSide = 10;
+	int shapeSide = 5;
 	
 	public void shapeSides();
 

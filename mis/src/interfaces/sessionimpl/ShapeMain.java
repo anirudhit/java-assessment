@@ -6,5 +6,10 @@ public class ShapeMain {
 			
 			ShapeInterface pgs = new PentagonShape();
 			pgs.shapeSides();
+			
+			PentagonShape pg = new PentagonShape();
+			pg.shapeSides();
+			pg.area();
+			
 		}
 }
