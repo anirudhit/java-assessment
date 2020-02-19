@@ -26,7 +26,7 @@ public class NegativeNumber {
 				System.out.print(arr[i]+" ");
 			}
 		}
-
+		scanner.close();
 	}
 
 }

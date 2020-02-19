@@ -42,7 +42,7 @@ public class UniqueElements {
 				System.out.print(arr[i]+ " ");
 			}
 		}
-
+		scanner.close();
 	}
 
 }
