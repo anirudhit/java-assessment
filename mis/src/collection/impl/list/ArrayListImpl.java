@@ -16,6 +16,8 @@ public class ArrayListImpl {
 		obj.add(1208);
 		obj.add("John");
 		obj.add("Doe");
+		obj.add(null);
+		System.out.println("obj: "+obj);
 		
 		//Array list with Integer
 		List<Integer> objI = new ArrayList<Integer>();
