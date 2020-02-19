@@ -29,6 +29,7 @@ public class CalculateArea {
 		side	=	sc.nextInt();
 		area	=	calcArea.calculateAreaofSquare(side);
 		System.out.println(area);
+		sc.close();
 	}
 	
 	public String calculateAreaofCircle(float radius) {
