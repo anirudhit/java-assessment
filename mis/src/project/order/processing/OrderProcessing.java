@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class OrderProcessing {
 
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		
 		Scanner sci = new Scanner(System.in);
