@@ -11,7 +11,7 @@
 	<!-- content -->
 	<div class="wrapper row2">
 		<div id="container" class="clear">
-			<form action="fetchEmployeeServlet" method="post">
+			<form action="GetEmployeeServlet" method="post">
 				<div style="padding: 5px">
 					<b>Empid</b>
 				</div>

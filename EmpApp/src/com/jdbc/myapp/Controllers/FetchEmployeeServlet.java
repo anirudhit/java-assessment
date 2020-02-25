@@ -1,7 +1,6 @@
 package com.jdbc.myapp.Controllers;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +12,16 @@ import com.jdbc.myapp.Beans.Employee;
 import com.jdbc.myapp.Modals.EmployeeData;
 
 /**
- * Servlet implementation class fetchEmployeeServlet
+ * Servlet implementation class FetchEmployeeServlet
  */
-@WebServlet("/fetchEmployeeServlet")
-public class fetchEmployeeServlet extends HttpServlet {
+@WebServlet("/FetchEmployeeServlet")
+public class FetchEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public fetchEmployeeServlet() {
+	public FetchEmployeeServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -42,18 +41,18 @@ public class fetchEmployeeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//		String empid=request.getParameter("empid");
-		//		int employeeId=Integer.parseInt(empid);
-		//		Employee employee=new Employee();
-		//		employee.setEmpId(employeeId);
-		//		EmployeeData empData=new EmployeeData();
-		//		empData.fetchData(employee);
-		//		if(!employee.getEmployeeName().isEmpty()){
-		//			HttpSession session=request.getSession();
-		//			session.setAttribute("EmployeeDetails", employee);
-		//			response.sendRedirect("UpdateEmployee.jsp");
-		//		}
-		//			
+		String empid=request.getParameter("empid");
+		int employeeId=Integer.parseInt(empid);
+		Employee employee=new Employee();
+		employee.setEmpId(employeeId);
+		EmployeeData empData=new EmployeeData();
+		empData.fetchData(employee);
+		if(!employee.getEmployeeName().isEmpty()){
+			HttpSession session=request.getSession();
+			session.setAttribute("EmployeeDetails", employee);
+			response.sendRedirect("UpdateEmployee.jsp");
+		}
+
 	}
 
 }
