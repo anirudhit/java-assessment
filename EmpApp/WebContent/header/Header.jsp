@@ -10,7 +10,7 @@
 			<ul>
 				<li><a href="AddEmployee.jsp">New Employee</a></li>
 				<li><a href="ModifyEmployee.jsp">Modify Employee</a></li>
-				<li><a href="ShowEmployee.jsp">Show Employees</a></li>
+				<li><a href="ShowEmployees.jsp">Show Employees</a></li>
 				<li><a href="SearchEmployee.jsp">Search Employee</a></li>
 				<li class="last"><a href="logout.jsp">Logout</a></li>
 			</ul>

@@ -23,7 +23,8 @@
 						<b>Empid</b>
 					</div>
 					<div style="padding: 5px">
-						<input type="hidden" name="empid"
+						<input type="text" name="empid"
+							readonly="readonly"
 							style="padding: 5px; border-radius: 5px"
 							value=<%=employee.getEmpId()%>>
 					</div>
