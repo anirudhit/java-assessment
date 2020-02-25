@@ -50,9 +50,9 @@ public class UpdateEmployee extends HttpServlet {
 		try {
 			int data=employeeData.UpdateData(employee);
 			if(data!=0)
-				response.sendRedirect("SuucessPage.jsp");
+				response.sendRedirect("SuccessPage.jsp");
 			else
-				response.sendRedirect("ErrorMessage.jsp");
+				response.sendRedirect("ErrorPage.jsp");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

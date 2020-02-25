@@ -8,8 +8,14 @@
 </head>
 <body>
 	<%@include file="header/Header.jsp"%>
+
+
 	<!-- content -->
-	<%@include file="content/Content.jsp"%>
+	<div style="text-align: center">
+		<h1>Some error occurred. Please check the input</h1>
+	</div>
+
+
 	<!-- Footer -->
 	<%@include file="footer/Footer.jsp"%>
 </body>

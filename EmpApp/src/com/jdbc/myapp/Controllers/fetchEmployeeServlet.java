@@ -35,7 +35,7 @@ public class fetchEmployeeServlet extends HttpServlet {
 		Employee employee=new Employee();
 		employee.setCity("city");
 		request.setAttribute("somedata", 90);
-		response.sendRedirect("SuucessPage.jsp");
+		response.sendRedirect("SuccessPage.jsp");
 	}
 
 	/**
