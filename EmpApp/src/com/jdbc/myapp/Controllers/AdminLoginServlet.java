@@ -18,14 +18,14 @@ import com.jdbc.myapp.Modals.AdminLogin;
 @WebServlet("/AdminLoginServlet")
 public class AdminLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AdminLoginServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public AdminLoginServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -38,15 +38,15 @@ public class AdminLoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-String username=		request.getParameter("username");
-String password=		request.getParameter("password");
-AdminDetails adminDetails=new  AdminDetails();
-adminDetails.setPassword(password);
-adminDetails.setUsername(username);
-AdminLogin adminLoginModal=new AdminLogin();
+		String username=		request.getParameter("username");
+		String password=		request.getParameter("password");
+		AdminDetails adminDetails=new  AdminDetails();
+		adminDetails.setPassword(password);
+		adminDetails.setUsername(username);
+		AdminLogin adminLoginModal=new AdminLogin();
 
-//	boolean result=adminLoginModal.validateLogin(adminDetails);
-//	if(result)
+		//	boolean result=adminLoginModal.validateLogin(adminDetails);
+		//	if(result)
 		response.sendRedirect("homepage.jsp");
 	}
 }

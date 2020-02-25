@@ -18,14 +18,14 @@ import com.jdbc.myapp.Modals.EmployeeData;
 @WebServlet("/fetchEmployeeServlet")
 public class fetchEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public fetchEmployeeServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public fetchEmployeeServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,18 +42,18 @@ public class fetchEmployeeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		String empid=request.getParameter("empid");
-//		int employeeId=Integer.parseInt(empid);
-//		Employee employee=new Employee();
-//		employee.setEmpId(employeeId);
-//		EmployeeData empData=new EmployeeData();
-//		empData.fetchData(employee);
-//		if(!employee.getEmployeeName().isEmpty()){
-//			HttpSession session=request.getSession();
-//			session.setAttribute("EmployeeDetails", employee);
-//			response.sendRedirect("UpdateEmployee.jsp");
-//		}
-//			
+		//		String empid=request.getParameter("empid");
+		//		int employeeId=Integer.parseInt(empid);
+		//		Employee employee=new Employee();
+		//		employee.setEmpId(employeeId);
+		//		EmployeeData empData=new EmployeeData();
+		//		empData.fetchData(employee);
+		//		if(!employee.getEmployeeName().isEmpty()){
+		//			HttpSession session=request.getSession();
+		//			session.setAttribute("EmployeeDetails", employee);
+		//			response.sendRedirect("UpdateEmployee.jsp");
+		//		}
+		//			
 	}
 
 }

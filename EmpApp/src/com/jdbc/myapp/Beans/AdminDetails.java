@@ -2,7 +2,7 @@ package com.jdbc.myapp.Beans;
 
 public class AdminDetails {
 	private String username,password;
-public String getUsername() {
+	public String getUsername() {
 		return username;
 	}
 

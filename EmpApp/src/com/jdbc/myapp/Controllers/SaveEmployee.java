@@ -18,14 +18,14 @@ import com.jdbc.myapp.Modals.EmployeeData;
 @WebServlet("/SaveEmployee")
 public class SaveEmployee extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public SaveEmployee() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public SaveEmployee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -39,24 +39,24 @@ public class SaveEmployee extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee employee=new Employee();
-employee.setEmpId(Integer.parseInt(request.getParameter("empid")));
-employee.setEmployeeName(request.getParameter("empname"));
-employee.setSkills(request.getParameter("skills"));
-employee.setCity(request.getParameter("city"));
-employee.setSalary(request.getParameter("salary"));
-employee.setDateOfJoining(request.getParameter("doj"));
-		
-EmployeeData employeeData=new EmployeeData();
-try {
-	int data=101;//employeeData.InsertData(employee);
-	if(data!=0)
-		response.sendRedirect("SuucessPage.jsp");
-	else
-		response.sendRedirect("ErrorMessage.jsp");
-} catch (Exception e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
+		employee.setEmpId(Integer.parseInt(request.getParameter("empid")));
+		employee.setEmployeeName(request.getParameter("empname"));
+		employee.setSkills(request.getParameter("skills"));
+		employee.setCity(request.getParameter("city"));
+		employee.setSalary(request.getParameter("salary"));
+		employee.setDateOfJoining(request.getParameter("doj"));
+
+		EmployeeData employeeData=new EmployeeData();
+		try {
+			int data=101;//employeeData.InsertData(employee);
+			if(data!=0)
+				response.sendRedirect("SuucessPage.jsp");
+			else
+				response.sendRedirect("ErrorMessage.jsp");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

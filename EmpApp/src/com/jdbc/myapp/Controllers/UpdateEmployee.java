@@ -17,14 +17,14 @@ import com.jdbc.myapp.Modals.EmployeeData;
 @WebServlet("/UpdateEmployee")
 public class UpdateEmployee extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UpdateEmployee() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public UpdateEmployee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,19 +44,19 @@ public class UpdateEmployee extends HttpServlet {
 		employee.setCity(request.getParameter("city"));
 		employee.setSalary(request.getParameter("salary"));
 		employee.setDateOfJoining(request.getParameter("doj"));
-		
-		
-EmployeeData employeeData=new EmployeeData();
-try {
-	int data=employeeData.UpdateData(employee);
-	if(data!=0)
-		response.sendRedirect("SuucessPage.jsp");
-	else
-		response.sendRedirect("ErrorMessage.jsp");
-} catch (Exception e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
+
+
+		EmployeeData employeeData=new EmployeeData();
+		try {
+			int data=employeeData.UpdateData(employee);
+			if(data!=0)
+				response.sendRedirect("SuucessPage.jsp");
+			else
+				response.sendRedirect("ErrorMessage.jsp");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
