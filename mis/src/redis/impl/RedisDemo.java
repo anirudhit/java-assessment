@@ -26,6 +26,8 @@ public class RedisDemo {
 		
 		//Fetching Set value with key
 		System.out.println("Set pop with key(lemon): "+ jedis.spop("lemon"));
+		
+		jedis.close();
 	}
 
 }
