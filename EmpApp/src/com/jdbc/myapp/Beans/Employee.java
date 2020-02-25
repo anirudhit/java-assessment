@@ -4,9 +4,9 @@ public class Employee {
 	private int empId;
 	private String employeeName;
 	private String dateOfJoining;
-	private String Salary;
-	private String City;
-	private String Skills;
+	private String salary;
+	private String city;
+	private String skills;
 	public int getEmpId() {
 		return empId;
 	}
@@ -26,24 +26,26 @@ public class Employee {
 		this.dateOfJoining = dateOfJoining;
 	}
 	public String getSalary() {
-		return Salary;
+		return salary;
 	}
 	public void setSalary(String salary) {
-		Salary = salary;
+		this.salary = salary;
 	}
 	public String getCity() {
-		return City;
+		return city;
 	}
 	public void setCity(String city) {
-		City = city;
+		this.city = city;
 	}
 	public String getSkills() {
-		return Skills;
+		return skills;
 	}
 	public void setSkills(String skills) {
-		Skills = skills;
+		this.skills = skills;
 	}
-	public String toString(){
-		return City+" "+dateOfJoining+" "+empId;
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", employeeName=" + employeeName + ", dateOfJoining=" + dateOfJoining
+				+ ", salary=" + salary + ", city=" + city + ", skills=" + skills + "]";
 	}
 }
