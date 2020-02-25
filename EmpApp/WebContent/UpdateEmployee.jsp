@@ -11,7 +11,7 @@
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-<%@include file="Headers.jsp" %>
+<%@include file="header/Header.jsp" %>
 <!-- content -->
 <div class="wrapper row2">
 <h5 style="text-align:center;">Add New Employee</h5>
@@ -55,6 +55,6 @@ Employee employee=(Employee)session.getAttribute("EmployeeDetails");
   </div>
 </div>
 <!-- Footer -->
-<%@include file="Footer.jsp" %>
+<%@include file="footer/Footer.jsp" %>
 </body>
 </html>
