@@ -7,10 +7,10 @@
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-<%@include file="header/Header.jsp" %>
-<!-- content -->
-<%@include file="content/Content.jsp" %>
-<!-- Footer -->
-<%@include file="footer/Footer.jsp" %>
+	<%@include file="header/Header.jsp"%>
+	<!-- content -->
+	<%@include file="content/Content.jsp"%>
+	<!-- Footer -->
+	<%@include file="footer/Footer.jsp"%>
 </body>
 </html>

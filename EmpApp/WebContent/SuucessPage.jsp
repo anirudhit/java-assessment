@@ -6,11 +6,11 @@
 <meta charset="UTF-8">
 </head>
 <body>
-<%
-int emp=(Integer)request.getAttribute("somedata");
-session.setAttribute("employeedata",null);
-session.removeAttribute("employeedata");
-%>
-<h2><%=emp%></h2>
+	<%
+		int emp = (Integer) request.getAttribute("somedata");
+		session.setAttribute("employeedata", null);
+		session.removeAttribute("employeedata");
+	%>
+	<h2><%=emp%></h2>
 </body>
 </html>
