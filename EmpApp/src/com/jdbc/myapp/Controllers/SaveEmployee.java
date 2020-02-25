@@ -46,11 +46,9 @@ public class SaveEmployee extends HttpServlet {
 		employee.setSalary(request.getParameter("salary"));
 		employee.setDateOfJoining(request.getParameter("doj"));
 		
-		System.out.println(employee);
-		
 		EmployeeData employeeData=new EmployeeData();
 		try {
-			int data=101;//employeeData.InsertData(employee);
+			int data = employeeData.InsertData(employee);
 			if(data!=0)
 				response.sendRedirect("SuccessPage.jsp");
 			else

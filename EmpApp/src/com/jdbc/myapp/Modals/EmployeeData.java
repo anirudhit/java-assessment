@@ -19,8 +19,8 @@ public class EmployeeData {
 			ps=con.prepareStatement(sql);
 			ps.setInt(1, employee.getEmpId());
 			ps.setString(2,employee.getEmployeeName());
-			ps.setString(3,employee.getSalary());
-			ps.setString(4,employee.getDateOfJoining());
+			ps.setString(3,employee.getDateOfJoining());
+			ps.setString(4,employee.getSalary());
 			ps.setString(5,employee.getCity());
 			ps.setString(6,employee.getSkills());
 			result=ps.executeUpdate();
