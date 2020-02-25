@@ -38,15 +38,22 @@ public class AdminLoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username=		request.getParameter("username");
-		String password=		request.getParameter("password");
+		String username		=	request.getParameter("username");
+		String password		=	request.getParameter("password");
 		AdminDetails adminDetails=new  AdminDetails();
 		adminDetails.setPassword(password);
 		adminDetails.setUsername(username);
 		AdminLogin adminLoginModal=new AdminLogin();
 
-		//	boolean result=adminLoginModal.validateLogin(adminDetails);
-		//	if(result)
-		response.sendRedirect("homepage.jsp");
+		boolean result = false;
+		try {
+			result = adminLoginModal.validateLogin(adminDetails);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(result)
+			response.sendRedirect("homepage.jsp");
+		else
+			response.sendRedirect("InvalidLogin.jsp");
 	}
 }
