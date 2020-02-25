@@ -3,7 +3,7 @@
 <%@page import="com.jdbc.myapp.Beans.Employee"%>
 <html lang="en" dir="ltr">
 <head>
-<title>Basic 89</title>
+<title>Emp App</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->

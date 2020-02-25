@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 <%@page import="com.jdbc.myapp.Beans.Employee"%>
-<title>Basic 89</title>
+<title>Emp App</title>
 <meta charset="UTF-8">
 </head>
 <body>
