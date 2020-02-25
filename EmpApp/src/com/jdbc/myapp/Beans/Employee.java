@@ -7,6 +7,18 @@ public class Employee {
 	private String salary;
 	private String city;
 	private String skills;
+	
+	public Employee() {}
+	
+	public Employee(int empId, String employeeName, String dateOfJoining, String salary, String city, String skills) {
+		this.empId = empId;
+		this.employeeName = employeeName;
+		this.dateOfJoining = dateOfJoining;
+		this.salary = salary;
+		this.city = city;
+		this.skills = skills;
+	}
+	
 	public int getEmpId() {
 		return empId;
 	}

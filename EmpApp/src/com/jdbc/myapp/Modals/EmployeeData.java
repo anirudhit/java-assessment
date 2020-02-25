@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
 
 import com.jdbc.myapp.Beans.Employee;
 import com.jdbc.myapp.DBConnection.DatabaseConnection;
@@ -52,6 +54,26 @@ public class EmployeeData {
 			e.printStackTrace();
 		}
 		return emp;
+	}
+	
+	public List<Employee> fetchData(List<Employee> empList) {
+		try {
+			String query = "SELECT * FROM employee";
+			Statement stmt = con.createStatement();
+			ResultSet res = stmt.executeQuery(query);
+			while(res.next()) {
+				int empId = Integer.parseInt(res.getString("empid"));
+				String employeeName = res.getString("employeename");
+				String dateOfJoining = res.getString("dateofjoining");
+				String salary = res.getString("salary");
+				String city = res.getString("city");
+				String skills = res.getString("skills");
+				empList.add(new Employee(empId, employeeName, dateOfJoining, salary, city, skills));
+			}
+		}catch (Exception e) {
+			System.out.println(e);
+		}
+		return empList;
 	}
 
 	public  int UpdateData(Employee employee) throws SQLException{
