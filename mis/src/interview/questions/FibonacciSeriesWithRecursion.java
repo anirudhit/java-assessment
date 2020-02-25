@@ -19,13 +19,12 @@ public class FibonacciSeriesWithRecursion {
 	}
 	
 	public static int fibSeries(int n) {
-		if(n == 0) {
+		if(n == 0)
 			return 0;
-		}else if(n == 1) {
+		else if((n == 1) || (n==2))
 			return 1;
-		}else {
+		else
 			return fibSeries(n-1)+ fibSeries(n-2);
-		}
 	}
 
 }
