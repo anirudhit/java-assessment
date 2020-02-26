@@ -9,64 +9,40 @@
 <body>
 	<%@include file="header/Header.jsp"%>
 	<!-- content -->
-	<div class="wrapper row2">
-		<div id="container" class="clear">
-			<!-- main content -->
-			<div id="homepage">
-				<!-- services area -->
-				<section id="services" class="clear">
-					<article class="one_quarter">
-						<figure>
-							<img src="images/demo/32x32.gif" width="32" height="32" alt="">
-						</figure>
-						<strong>Lorum ipsum dolor</strong>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
-						<p class="more">
-							<a href="#">Read More &raquo;</a>
-						</p>
-					</article>
-					<article class="one_quarter">
-						<figure>
-							<img src="images/demo/32x32.gif" width="32" height="32" alt="">
-						</figure>
-						<strong>Lorum ipsum dolor</strong>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
-						<p class="more">
-							<a href="#">Read More &raquo;</a>
-						</p>
-					</article>
-					<article class="one_quarter">
-						<figure>
-							<img src="images/demo/32x32.gif" width="32" height="32" alt="">
-						</figure>
-						<strong>Lorum ipsum dolor</strong>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
-						<p class="more">
-							<a href="#">Read More &raquo;</a>
-						</p>
-					</article>
-					<article class="one_quarter lastbox">
-						<figure>
-							<img src="images/demo/32x32.gif" width="32" height="32" alt="">
-						</figure>
-						<strong>Lorum ipsum dolor</strong>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
-						<p class="more">
-							<a href="#">Read More &raquo;</a>
-						</p>
-					</article>
-				</section>
-
-				<!-- / latest work -->
-			</div>
-			<!-- main content -->
-
+	
+	<!-- <form action="GetEmployeeServlet" method="post">
+		<div style="padding: 5px">
+			<b>Empid</b>
 		</div>
-	</div>
+		<div style="padding: 5px">
+			<input type="text" name="empid"
+				style="padding: 5px; border-radius: 5px">
+		</div>
+
+		<div style="padding: 5px">
+			<input type="submit" value="Search"
+				style="padding: 5px; margin: 10px">
+		</div>
+	</form> -->
+	
+	<br/>
+	<br/>
+	<h1 style="text-align: center;">All employee details</h1>
+	<br/><br/>
+    <%-- <jsp:useBean id="allFestivals" type="java.util.ArrayList" scope="session" /> --%>
+	<table border="1"  align="center" width="750">
+		<tr>
+			<td>Employee Id</td>
+			<td>Employee name</td>
+			<td>Date Of Joining</td>
+			<td>Salary</td>
+			<td>City</td>
+			<td>Skills</td>
+		</tr>
+		
+	</table>
+
+
 	<!-- Footer -->
 	<%@include file="footer/Footer.jsp"%>
 </body>
