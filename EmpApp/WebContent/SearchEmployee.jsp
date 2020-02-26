@@ -52,10 +52,8 @@
 						emp.setSkills(rs.getString("skills"));
 						emp.setCity(rs.getString("city"));
 						emp.setDateOfJoining(rs.getString("dateofjoining"));
-						
-						
-						//session=request.getSession();
-			    		//session.setAttribute("SearchEmployeeDetails", emp);
+					}else{
+						response.sendRedirect("ErrorPage.jsp");
 					}
 				}
 				catch(Exception e){

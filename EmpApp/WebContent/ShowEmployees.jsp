@@ -30,7 +30,7 @@
 			
 			<%for(Employee e : emp){%>
 				<tr>
-					<td><%= e.getEmpId() %></td>
+					<td><a href="UpdateEmployee.jsp?empId=<%= e.getEmpId() %>"> <%= e.getEmpId() %> </a></td>
 					<td><%= e.getEmpName() %></td>
 					<td><%= e.getDateOfJoining() %></td>
 					<td><%= e.getSalary() %></td>

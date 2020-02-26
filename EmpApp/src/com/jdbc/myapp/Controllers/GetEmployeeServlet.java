@@ -54,7 +54,7 @@ public class GetEmployeeServlet extends HttpServlet {
     	}else if(!employee.getEmpName().isEmpty()){
     		HttpSession session=request.getSession();
     		session.setAttribute("EmployeeDetails", employee);
-    		response.sendRedirect("UpdateEmployee.jsp");
+    		response.sendRedirect("UpdateEmployee.jsp?empId="+empid);
     	}else
     		response.sendRedirect("ErrorPage.jsp");
 

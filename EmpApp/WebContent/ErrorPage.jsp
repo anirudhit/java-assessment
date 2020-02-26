@@ -11,8 +11,10 @@
 
 
 	<!-- content -->
-	<div style="text-align: center">
-		<h1>Some error occurred. Please check the input</h1>
+	
+	<div class="wrapper row2">
+		<br/>
+		<h1 style="text-align: center;">Some error occurred. Please check the input</h1>
 	</div>
 
 
