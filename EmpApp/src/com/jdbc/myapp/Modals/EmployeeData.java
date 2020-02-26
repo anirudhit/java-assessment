@@ -43,7 +43,7 @@ public class EmployeeData {
 			ps.setInt(1, emp.getEmpId());
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()){
-				emp.setEmpName(rs.getString("employeename"));
+				emp.setEmpName(rs.getString("empname"));
 				emp.setSalary(rs.getString("salary"));
 				emp.setSkills(rs.getString("skills"));
 				emp.setCity(rs.getString("city"));
@@ -63,12 +63,12 @@ public class EmployeeData {
 			ResultSet res = stmt.executeQuery(query);
 			while(res.next()) {
 				int empId = Integer.parseInt(res.getString("empid"));
-				String employeeName = res.getString("employeename");
+				String empname = res.getString("empname");
 				String dateOfJoining = res.getString("dateofjoining");
 				String salary = res.getString("salary");
 				String city = res.getString("city");
 				String skills = res.getString("skills");
-				empList.add(new Employee(empId, employeeName, dateOfJoining, salary, city, skills));
+				empList.add(new Employee(empId, empname, dateOfJoining, salary, city, skills));
 			}
 		}catch (Exception e) {
 			System.out.println(e);
