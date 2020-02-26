@@ -12,7 +12,8 @@
 	<%@include file="header/Header.jsp"%>
 	<!-- content -->
 	<div class="wrapper row2">
-		<h5 style="text-align: center;">Add New Employee</h5>
+		<br />
+		<h5 style="text-align: center;">Update Employee</h5>
 		<%
 			Employee employee = (Employee) session.getAttribute("EmployeeDetails");
 		%>
@@ -26,7 +27,7 @@
 						<input type="text" name="empid"
 							readonly="readonly"
 							style="padding: 5px; border-radius: 5px"
-							value=<%=employee.getEmpId()%>>
+							value="<%=employee.getEmpId()%>">
 					</div>
 					<div style="padding: 5px">
 						<b>Employee Name</b>
@@ -34,7 +35,7 @@
 					<div style="padding: 5px">
 						<input type="text" name="empname"
 							style="padding: 5px; border-radius: 5px"
-							value=<%=employee.getEmpName()%>>
+							value="<%=employee.getEmpName().toString()%>">
 					</div>
 					<div style="padding: 5px">
 						<b>Salary</b>
@@ -42,7 +43,7 @@
 					<div style="padding: 5px">
 						<input type="text" name="salary"
 							style="padding: 5px; border-radius: 5px"
-							value=<%=employee.getSalary()%>>
+							value="<%=employee.getSalary()%>">
 					</div>
 					<div style="padding: 5px">
 						<b>Date of Joining</b>
@@ -50,7 +51,7 @@
 					<div style="padding: 5px">
 						<input type="text" name="doj"
 							style="padding: 5px; border-radius: 5px"
-							value=<%=employee.getDateOfJoining()%>>
+							value="<%=employee.getDateOfJoining()%>">
 					</div>
 					<div style="padding: 5px">
 						<b>City</b>

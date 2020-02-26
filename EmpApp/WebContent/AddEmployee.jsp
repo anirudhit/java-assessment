@@ -10,6 +10,7 @@
 	<%@include file="header/Header.jsp"%>
 	<!-- content -->
 	<div class="wrapper row2">
+		<br />
 		<h5 style="text-align: center;">Add New Employee</h5>
 		<div id="container" class="clear">
 			<div style="width: 200px; margin: 0 auto">
