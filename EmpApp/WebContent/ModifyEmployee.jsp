@@ -13,7 +13,7 @@
 		<div id="container" class="clear">
 			<form action="GetEmployeeServlet" method="post">
 				<div style="padding: 5px">
-					<b>Empid</b>
+					<b>EmpID</b>
 				</div>
 				<div style="padding: 5px">
 					<input type="text" name="empid"
