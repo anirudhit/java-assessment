@@ -47,7 +47,7 @@ public class EmployeeData {
 				emp.setSalary(rs.getString("salary"));
 				emp.setSkills(rs.getString("skills"));
 				emp.setCity(rs.getString("city"));
-				emp.setDateOfJoining(rs.getString("salary"));
+				emp.setDateOfJoining(rs.getString("dateofjoining"));
 			}
 		}
 		catch(Exception e){
@@ -87,8 +87,8 @@ public class EmployeeData {
 			ps.setString(1,employee.getEmpName());
 			ps.setString(2,employee.getSalary());
 			ps.setString(3,employee.getDateOfJoining());
-			ps.setString(5,employee.getCity());
 			ps.setString(4,employee.getSkills());
+			ps.setString(5,employee.getCity());
 			result=ps.executeUpdate();
 		}
 		catch(Exception e){
