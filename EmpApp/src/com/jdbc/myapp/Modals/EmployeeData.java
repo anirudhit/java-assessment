@@ -20,7 +20,7 @@ public class EmployeeData {
 			String sql="insert into employee values(?,?,?,?,?,?)";
 			ps=con.prepareStatement(sql);
 			ps.setInt(1, employee.getEmpId());
-			ps.setString(2,employee.getEmployeeName());
+			ps.setString(2,employee.getEmpName());
 			ps.setString(3,employee.getDateOfJoining());
 			ps.setString(4,employee.getSalary());
 			ps.setString(5,employee.getCity());
@@ -43,7 +43,7 @@ public class EmployeeData {
 			ps.setInt(1, emp.getEmpId());
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()){
-				emp.setEmployeeName(rs.getString("employeename"));
+				emp.setEmpName(rs.getString("employeename"));
 				emp.setSalary(rs.getString("salary"));
 				emp.setSkills(rs.getString("skills"));
 				emp.setCity(rs.getString("city"));
@@ -76,14 +76,15 @@ public class EmployeeData {
 		return empList;
 	}
 
-	public  int UpdateData(Employee employee) throws SQLException{
+	public  int updateData(Employee employee) throws SQLException{
+		System.out.println(employee);
 		PreparedStatement ps=null;
 		int result=0;
 		try{
 			String sql="update employee set empname=?,salary=?,dateofjoining=?,skills=?,city=? where empid=?";
 			ps=con.prepareStatement(sql);
 			ps.setInt(6, employee.getEmpId());
-			ps.setString(1,employee.getEmployeeName());
+			ps.setString(1,employee.getEmpName());
 			ps.setString(2,employee.getSalary());
 			ps.setString(3,employee.getDateOfJoining());
 			ps.setString(5,employee.getCity());

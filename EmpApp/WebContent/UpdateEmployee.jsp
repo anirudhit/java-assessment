@@ -34,7 +34,7 @@
 					<div style="padding: 5px">
 						<input type="text" name="empname"
 							style="padding: 5px; border-radius: 5px"
-							value=<%=employee.getEmployeeName()%>>
+							value=<%=employee.getEmpName()%>>
 					</div>
 					<div style="padding: 5px">
 						<b>Salary</b>

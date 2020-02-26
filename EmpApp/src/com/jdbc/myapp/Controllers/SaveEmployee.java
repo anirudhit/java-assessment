@@ -40,7 +40,7 @@ public class SaveEmployee extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee employee=new Employee();
 		employee.setEmpId(Integer.parseInt(request.getParameter("empid")));
-		employee.setEmployeeName(request.getParameter("empname"));
+		employee.setEmpName(request.getParameter("empname"));
 		employee.setSkills(request.getParameter("skills"));
 		employee.setCity(request.getParameter("city"));
 		employee.setSalary(request.getParameter("salary"));

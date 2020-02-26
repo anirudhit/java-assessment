@@ -47,7 +47,7 @@ public class FetchEmployeeServlet extends HttpServlet {
 		employee.setEmpId(employeeId);
 		EmployeeData empData=new EmployeeData();
 		empData.fetchData(employee);
-		if(!employee.getEmployeeName().isEmpty()){
+		if(!employee.getEmpName().isEmpty()){
 			HttpSession session=request.getSession();
 			session.setAttribute("EmployeeDetails", employee);
 			response.sendRedirect("UpdateEmployee.jsp");
