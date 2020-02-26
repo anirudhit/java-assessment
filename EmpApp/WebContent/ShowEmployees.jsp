@@ -11,35 +11,36 @@
 <body>
 	<%@include file="header/Header.jsp"%>
 	<!-- content -->
-	<br/>
-	<br/>
-	<h1 style="text-align: center;">All employee details</h1>
-	<br/><br/>
-    <%
-    		ArrayList<Employee> emp = (ArrayList<Employee>) session.getAttribute("EmployeeListDetails");
-	%>
-	<table border="1"  align="center" width="750">
-		<tr>
-			<th>Employee Id</th>
-			<th>Employee name</th>
-			<th>Date Of Joining</th>
-			<th>Salary</th>
-			<th>City</th>
-			<th>Skills</th>
-		</tr>
-		
-		<%for(Employee e : emp){%>
+	<div class="wrapper row2">
+		<br/>
+		<h1 style="text-align: center;">All employee details</h1>
+		<br/><br/>
+	    <%
+	    		ArrayList<Employee> emp = (ArrayList<Employee>) session.getAttribute("EmployeeListDetails");
+		%>
+		<table border="1"  align="center" width="750">
 			<tr>
-				<td><%= e.getEmpId() %></td>
-				<td><%= e.getEmpName() %></td>
-				<td><%= e.getDateOfJoining() %></td>
-				<td><%= e.getSalary() %></td>
-				<td><%= e.getCity() %></td>
-				<td><%= e.getSkills() %></td>
+				<th>Employee Id</th>
+				<th>Employee name</th>
+				<th>Date Of Joining</th>
+				<th>Salary</th>
+				<th>City</th>
+				<th>Skills</th>
 			</tr>
-		<%}%>
-		
-	</table>
+			
+			<%for(Employee e : emp){%>
+				<tr>
+					<td><%= e.getEmpId() %></td>
+					<td><%= e.getEmpName() %></td>
+					<td><%= e.getDateOfJoining() %></td>
+					<td><%= e.getSalary() %></td>
+					<td><%= e.getCity() %></td>
+					<td><%= e.getSkills() %></td>
+				</tr>
+			<%}%>
+		</table>
+		<br />
+	</div>
 
 
 	<!-- Footer -->
