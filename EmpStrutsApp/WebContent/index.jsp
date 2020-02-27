@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="html" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,12 @@
 	<title>Emp Struts App</title>
 </head>
 <body>
-	<s:property value="message" default="Guest"/>
-	<s:form action="HelloStruts">
-		<s:textfield name="username"></s:textfield>
-		<s:submit value="Submit"></s:submit>
-	</s:form>
+	<h1>Employee registration form:</h1>
+	<html:form action="EmployeeRegistration">
+		<html:textfield name="name" label="Name"/>
+		<html:textfield name="email" label="Email"/>
+		<html:textarea name="address" label="Address"/>
+		<html:submit value="Register"/>
+	</html:form>
 </body>
 </html>
