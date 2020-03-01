@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ComponentListComponent } from './component-list/component-list.component';
+import { StarComponent } from './star/star.component';
 
 
 const routes: Routes = [
@@ -22,5 +23,6 @@ export const routingComponents = [
   HeaderComponent,
   FooterComponent,
   HomeComponent,
-  ComponentListComponent
+  ComponentListComponent,
+  StarComponent
 ];

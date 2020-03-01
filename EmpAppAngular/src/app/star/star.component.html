@@ -1,0 +1,15 @@
+<div class="star-content">
+    <div class="card-container">
+        <div class="card highlight-card card-small">
+
+            <i class="material-icons cursor-pointer" (click)="selectStar(1)" title="1 star">{{starsSelected >=1 ? 'star' : 'star_border'}}</i>
+            <i class="material-icons cursor-pointer" (click)="selectStar(2)" title="2 stars">{{starsSelected >=2 ? 'star' : 'star_border'}}</i>
+            <i class="material-icons cursor-pointer" (click)="selectStar(3)" title="3 stars">{{starsSelected >=3 ? 'star' : 'star_border'}}</i>
+            <i class="material-icons cursor-pointer" (click)="selectStar(4)" title="4 stars">{{starsSelected >=4 ? 'star' : 'star_border'}}</i>
+            <i class="material-icons cursor-pointer" (click)="selectStar(5)" title="5 stars">{{starsSelected >=5 ? 'star' : 'star_border'}}</i>
+        
+            <span>{{ starsSelected }} {{(starsSelected > 1) || (starsSelected == 0) ?'stars':'star'}} selected</span>
+    
+        </div>
+    </div>
+</div>
