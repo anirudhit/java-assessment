@@ -7,8 +7,9 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/anirudh</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/classicmodels</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">abhijith</property>
+    <mapping class="com.banirudh.dto.Customers"/>
    </session-factory>
 </hibernate-configuration>
