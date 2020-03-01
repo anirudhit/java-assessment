@@ -1,1 +1,15 @@
+<h1>Angular components</h1>
+
+<h4>=> Star component</h4>
 <app-star></app-star>
+
+<h4>=> For component</h4>
+<app-ngfor></app-ngfor>
+
+<h4>=> Pipes component</h4>
+<app-pipes></app-pipes>
+
+<h4>=> Interaction component</h4>
+<h6>=> Message: {{message}}</h6>
+
+<app-interaction [employee]="employee" (empMessage)="message = $event"></app-interaction>

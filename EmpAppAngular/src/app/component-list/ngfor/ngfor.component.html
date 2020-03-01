@@ -1,0 +1,30 @@
+<div class="ngfor-container">
+    <ul class="list-group" *ngFor="let color of colors">
+        <li class="list-group-item">{{color}}</li>
+    </ul>
+
+    <br/>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Color</th>
+            <th scope="col">Is first</th>
+            <th scope="col">Is last</th>
+            <th scope="col">Is even</th>
+            <th scope="col">Is odd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let color of colors; first as f; last as l; index as i; even as e; odd as o;">
+            <th scope="row">{{i}}</th>
+            <td>{{color}}</td>
+            <td>{{f}}</td>
+            <td>{{l}}</td>
+            <td>{{e}}</td>
+            <td>{{o}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

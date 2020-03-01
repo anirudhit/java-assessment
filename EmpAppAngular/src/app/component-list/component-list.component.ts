@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentListComponent implements OnInit {
 
+  employee = {
+    id: 1,
+    firstName: 'John',
+    lastName: 'Doe'
+  };
+
+  message = '';
+
   constructor() { }
 
   ngOnInit() {

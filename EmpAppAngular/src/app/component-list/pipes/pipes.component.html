@@ -1,0 +1,62 @@
+<ul>
+    <li><strong>Default message: </strong> {{message}}</li>
+    <li>
+        <strong>Lower case filter: </strong> {{message | lowercase}}
+    </li>
+    <li>
+        <strong>Upper case filter: </strong> {{message | uppercase}}
+    </li>
+    <li>
+        <strong>Title case filter: </strong> {{message | titlecase}}
+    </li>
+
+    <li>
+        <strong>Value without filter: </strong> {{value}}
+    </li>
+    <li>
+        <strong>Value with filter: </strong> {{value | number:'1.2-3'}}
+    </li>
+    <li>
+        <strong>Value with filter: </strong> {{value | number:'2.3-5'}}
+    </li>
+    <li>
+        <strong>Value with filter: </strong> {{value | number:'3.2-3'}}
+    </li>
+
+    <li>
+        <strong>Percent filter: </strong> {{percent | percent}}
+    </li>
+
+    <li>
+        <strong>Default currency filter: </strong> {{currency | currency}}
+    </li>
+    <li>
+        <strong>Currency filter: </strong> {{currency | currency:'GBP'}}
+    </li>
+    <li>
+        <strong>Currency filter: </strong> {{currency | currency:'INR'}}
+    </li>
+    <li>
+        <strong>Currency filter: </strong> {{currency | currency:'INR':'code'}}
+    </li>
+
+    <li>
+        <strong>Date without filter: </strong> {{today}}
+    </li>
+    <li>
+        <strong>Date with filter: </strong> {{today | date}}
+    </li>
+    <li>
+        <strong>Date with filter: </strong> {{today | date:'short'}}
+    </li>
+    <li>
+        <strong>Date with filter: </strong> {{today | date:'shortDate'}}
+    </li>
+    <li>
+        <strong>Date with filter: </strong> {{today | date:'shortTime'}}
+    </li>
+
+    <li>
+        <strong>JSON filter: </strong> {{employee | json}}
+    </li>
+</ul>

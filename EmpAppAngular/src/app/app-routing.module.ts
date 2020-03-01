@@ -4,7 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ComponentListComponent } from './component-list/component-list.component';
-import { StarComponent } from './star/star.component';
+import { StarComponent } from './component-list/star/star.component';
+import { NgforComponent } from './component-list/ngfor/ngfor.component';
+import { PipesComponent } from './component-list/pipes/pipes.component';
+import { InteractionComponent } from './component-list/interaction/interaction.component';
+
+
 
 
 const routes: Routes = [
@@ -24,5 +29,8 @@ export const routingComponents = [
   FooterComponent,
   HomeComponent,
   ComponentListComponent,
-  StarComponent
+  StarComponent,
+  NgforComponent,
+  PipesComponent,
+  InteractionComponent
 ];
