@@ -8,6 +8,8 @@ import { StarComponent } from './component-list/star/star.component';
 import { NgforComponent } from './component-list/ngfor/ngfor.component';
 import { PipesComponent } from './component-list/pipes/pipes.component';
 import { InteractionComponent } from './component-list/interaction/interaction.component';
+import { EmplistComponent } from './component-list/emplist/emplist.component';
+import { EmpdetailsComponent } from './component-list/empdetails/empdetails.component';
 
 
 
@@ -32,5 +34,7 @@ export const routingComponents = [
   StarComponent,
   NgforComponent,
   PipesComponent,
-  InteractionComponent
+  InteractionComponent,
+  EmplistComponent,
+  EmpdetailsComponent
 ];
