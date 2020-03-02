@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.jdbc.myapp.Beans.Employee;
-import com.jdbc.myapp.Modals.EmployeeData;
+import com.jdbc.myapp.Modals.EmployeeActions;
 
 /**
  * Servlet implementation class GetEmployeeServlet
@@ -42,21 +42,17 @@ public class GetEmployeeServlet extends HttpServlet {
 	 */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	String empid=request.getParameter("empid");
-    	int employeeId=Integer.parseInt(empid);
-    	Employee employee=new Employee();
-    	employee.setEmpId(employeeId);
-    	EmployeeData empData=new EmployeeData();
-    	empData.fetchData(employee);
-    	
-    	
-    	if(employee.getEmpName() == null) {
+    	int empId=Integer.parseInt(empid);
+    	Employee emp=new Employee();
+    	EmployeeActions empActions = new EmployeeActions();
+    	emp = empActions.fetchData(empId);
+    	if(emp == null) {
     		response.sendRedirect("ErrorPage.jsp");
-    	}else if(!employee.getEmpName().isEmpty()){
+    	}else {
     		HttpSession session=request.getSession();
-    		session.setAttribute("EmployeeDetails", employee);
+    		session.setAttribute("EmployeeDetails", emp);
     		response.sendRedirect("UpdateEmployee.jsp?empId="+empid);
-    	}else
-    		response.sendRedirect("ErrorPage.jsp");
+    	}
 
     }
 

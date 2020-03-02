@@ -25,4 +25,22 @@ public class EmployeeActions {
 		}
 		return result;
 	}
+	
+	public Employee fetchData(int empId){
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Employee emp = new Employee();
+		try {
+			session.beginTransaction();
+			emp = (Employee)session.get(Employee.class,empId);
+			session.getTransaction().commit();
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		finally {
+			session.close();
+		}
+		return emp;
+	}
 }
