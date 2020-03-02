@@ -10,14 +10,16 @@ import { PipesComponent } from './component-list/pipes/pipes.component';
 import { InteractionComponent } from './component-list/interaction/interaction.component';
 import { EmplistComponent } from './component-list/emplist/emplist.component';
 import { EmpdetailsComponent } from './component-list/empdetails/empdetails.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
 
 const routes: Routes = [
-  {path: 'components', component: ComponentListComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: '', component: HomeComponent}
+  {path: 'components', component: ComponentListComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -36,5 +38,6 @@ export const routingComponents = [
   PipesComponent,
   InteractionComponent,
   EmplistComponent,
-  EmpdetailsComponent
+  EmpdetailsComponent,
+  PageNotFoundComponent
 ];
