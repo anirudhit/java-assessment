@@ -43,4 +43,23 @@ public class EmployeeActions {
 		}
 		return emp;
 	}
+	
+	public  int updateData(Employee emp) {
+		int result=0;
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		try {
+			session.beginTransaction();
+			session.saveOrUpdate(emp);
+			session.getTransaction().commit();
+			result = 1;
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		finally {
+			session.close();
+		}
+		return result;
+	}
 }

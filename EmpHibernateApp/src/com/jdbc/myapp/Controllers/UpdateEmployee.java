@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jdbc.myapp.Beans.Employee;
+import com.jdbc.myapp.Modals.EmployeeActions;
 import com.jdbc.myapp.Modals.EmployeeData;
 
 /**
@@ -46,15 +47,14 @@ public class UpdateEmployee extends HttpServlet {
 		employee.setDateOfJoining(request.getParameter("doj"));
 
 
-		EmployeeData employeeData=new EmployeeData();
+		EmployeeActions empActions=new EmployeeActions();
 		try {
-			int data=employeeData.updateData(employee);
+			int data=empActions.updateData(employee);
 			if(data!=0)
 				response.sendRedirect("SuccessPage.jsp");
 			else
 				response.sendRedirect("ErrorPage.jsp");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
