@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.jdbc.myapp.Beans.Employee;
+import com.jdbc.myapp.Modals.EmployeeActions;
 import com.jdbc.myapp.Modals.EmployeeData;
 
 /**
@@ -35,8 +36,8 @@ public class GetEmployeesServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Employee> employee = new ArrayList<Employee>();
     	
-    	EmployeeData empData=new EmployeeData();
-    	empData.fetchData(employee);
+    	EmployeeActions empActions = new EmployeeActions();
+    	employee = empActions.fetchData();
     	System.out.println(employee);
     	
     	

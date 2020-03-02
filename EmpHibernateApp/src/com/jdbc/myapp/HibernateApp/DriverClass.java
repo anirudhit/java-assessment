@@ -1,5 +1,10 @@
 package com.jdbc.myapp.HibernateApp;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -23,6 +28,11 @@ public class DriverClass {
 		// Employee empDelete = new Employee();
 		// empDelete.setEmpId(4);
 		// deleteEmployee(empDelete);
+		
+		// Fetch employees
+		List<Employee> employee = new ArrayList<Employee>();
+		employee = fetchData();
+		System.out.println("EMPLOYEE: "+employee);
 	}
 	
 	public static void createEmployee(Employee emp) {
@@ -59,6 +69,26 @@ public class DriverClass {
 		finally {
 			session.close();
 		}
+	}
+	
+	public static List<Employee> fetchData(){
+		List<Employee> employees = new ArrayList<Employee>();
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		try {
+			session.beginTransaction();
+			String hql = "FROM Employee";
+			Query query = session.createQuery(hql);
+			employees = query.list();
+			session.getTransaction().commit();
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		finally {
+			session.close();
+		}
+		return employees;
 	}
 	
 	public static void updateEmployee(Employee emp) {
