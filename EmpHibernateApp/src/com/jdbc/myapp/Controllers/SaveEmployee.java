@@ -1,7 +1,6 @@
 package com.jdbc.myapp.Controllers;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jdbc.myapp.Beans.Employee;
-import com.jdbc.myapp.Modals.EmployeeData;
+import com.jdbc.myapp.Modals.EmployeeActions;
 
 /**
  * Servlet implementation class SaveEmployee
@@ -46,9 +45,9 @@ public class SaveEmployee extends HttpServlet {
 		employee.setSalary(request.getParameter("salary"));
 		employee.setDateOfJoining(request.getParameter("doj"));
 		
-		EmployeeData employeeData=new EmployeeData();
 		try {
-			int data = employeeData.InsertData(employee);
+			EmployeeActions employeeActions=new EmployeeActions();
+			int data = employeeActions.saveEmployee(employee);
 			if(data!=0)
 				response.sendRedirect("SuccessPage.jsp");
 			else

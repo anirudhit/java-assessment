@@ -2,7 +2,7 @@
 	<header id="header" class="clear">
 		<div id="hgroup">
 			<h1>
-				<a href="/EmpApp/homepage.jsp">Emp app</a>
+				<a href="homepage.jsp">Emp app</a>
 			</h1>
 			<h2>CRUD operation on Employee</h2>
 		</div>

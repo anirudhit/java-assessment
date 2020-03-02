@@ -1,6 +1,11 @@
 package com.jdbc.myapp.Beans;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+	@Id
 	private int empId;
 	private String empName;
 	private String dateOfJoining;
