@@ -10,8 +10,8 @@ public class DriverClass {
 	public static void main(String[] args) {
 		Customer cust = new Customer();
 		
-		//cust.setCustomerId(1);
-		//cust.setCustomerName("John Dusk");
+		// cust.setCustomerId(2);
+		// cust.setCustomerName("Josh King");
 		
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
@@ -19,7 +19,7 @@ public class DriverClass {
 		session.beginTransaction();
 		
 		// Adding the customer
-		//session.save(cust);
+		// session.save(cust);
 		
 		// Updating the customer
 		//session.saveOrUpdate(cust);
@@ -35,6 +35,7 @@ public class DriverClass {
 		
 		// Getting the customer details
 		
+		session.close();
 		
 	}
 }
