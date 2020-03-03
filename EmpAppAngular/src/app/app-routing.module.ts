@@ -11,6 +11,7 @@ import { InteractionComponent } from './component-list/interaction/interaction.c
 import { EmplistComponent } from './component-list/emplist/emplist.component';
 import { EmpdetailsComponent } from './component-list/empdetails/empdetails.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'components', component: ComponentListComponent},
+  {path: 'tdf', component: TemplatedrivenformComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -39,5 +41,6 @@ export const routingComponents = [
   InteractionComponent,
   EmplistComponent,
   EmpdetailsComponent,
-  PageNotFoundComponent
+  PageNotFoundComponent,
+  TemplatedrivenformComponent
 ];
