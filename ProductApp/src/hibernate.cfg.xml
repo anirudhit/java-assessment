@@ -10,7 +10,7 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/anirudh</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">abhijith</property>
-    <mapping class="com.banirudh.dto.category"/>
-    <mapping class="com.banirudh.dto.product"/>
+    <mapping class="com.product.dto.Category"/>
+    <mapping class="com.product.dto.Product"/>
    </session-factory>
 </hibernate-configuration>

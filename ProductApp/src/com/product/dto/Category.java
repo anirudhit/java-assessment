@@ -13,8 +13,8 @@ public class Category {
 	private int categoryId;
 	private String categoryName;
 	
-	@OneToMany
-	private List<Product> products = new ArrayList<Product>();
+	//@OneToMany
+	//private List<Product> products = new ArrayList<Product>();
 
 	public int getCategoryId() {
 		return categoryId;
@@ -32,16 +32,17 @@ public class Category {
 		this.categoryName = categoryName;
 	}
 
-	public List<Product> getProducts() {
-		return products;
-	}
-
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
+//	public List<Product> getProducts() {
+//		return products;
+//	}
+//
+//	public void setProducts(List<Product> products) {
+//		this.products = products;
+//	}
 
 	@Override
 	public String toString() {
-		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", products=" + products + "]";
+		//return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", products=" + products + "]";
+		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + "]";
 	}
 }
