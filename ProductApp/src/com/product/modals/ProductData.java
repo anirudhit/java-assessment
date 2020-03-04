@@ -18,7 +18,7 @@ public class ProductData {
 			ps=con.prepareStatement(sql);
 			ps.setInt(1, product.getProductId());
 			ps.setString(2,product.getProductname());
-			ps.setInt(3,product.getCategoryId());
+			ps.setInt(3,product.getCategory().getCategoryId());
 			ps.setDouble(4,product.getPrice());
 			ps.setInt(5,product.getQuantity());
 			result=ps.executeUpdate();

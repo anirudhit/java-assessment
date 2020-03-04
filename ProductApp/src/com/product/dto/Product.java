@@ -1,9 +1,18 @@
 package com.product.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Product {
+	@Id
 	private int productId;
 	private String productname;
-	private int categoryId;
+	@ManyToOne
+	@JoinColumn
+	private Category category;
 	private double price;
 	private int quantity;
 	public int getProductId() {
@@ -18,11 +27,11 @@ public class Product {
 	public void setProductname(String productname) {
 		this.productname = productname;
 	}
-	public int getCategoryId() {
-		return categoryId;
+	public Category getCategory() {
+		return category;
 	}
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 	public double getPrice() {
 		return price;
@@ -38,9 +47,8 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", productname=" + productname + ", categoryId=" + categoryId
+		return "Product [productId=" + productId + ", productname=" + productname + ", category=" + category
 				+ ", price=" + price + ", quantity=" + quantity + "]";
 	}
-	
 	
 }
