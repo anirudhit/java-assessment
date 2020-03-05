@@ -8,4 +8,21 @@
 		<constructor-arg value="100" type="int"></constructor-arg>
 		<constructor-arg value="John Doe" type="String"></constructor-arg>
 	</bean>
+	
+	<bean id="projectObject"  class="com.spring.DependencyInjection.Project">
+		<constructor-arg value="Baggage" type="String"></constructor-arg>
+		<constructor-arg value="900" type="int"></constructor-arg>
+	</bean>
+	
+	<bean id="projectObjectSkill"  class="com.spring.DependencyInjection.Project">
+		<constructor-arg>
+			<list>
+				<value>Spring</value>
+				<value>Angular</value>
+				<value>Java8</value>
+				<value>JavaScript</value>
+			</list>
+			
+		</constructor-arg>
+	</bean>
 </beans>
