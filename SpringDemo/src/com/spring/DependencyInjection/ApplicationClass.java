@@ -9,6 +9,6 @@ public class ApplicationClass
     }
     
     public void callTask() {
-        this.emp.doSomething();
+        this.emp.doSomeTask();
     }
 }
