@@ -9,6 +9,15 @@
 		<constructor-arg value="John Doe" type="String"></constructor-arg>
 	</bean>
 	
+	<bean id="developerObjectPhno"  class="com.spring.DependencyInjection.Developer">
+		<constructor-arg>
+			<map>  
+				<entry key="primaryPhno"  value="8765445654"></entry>  
+				<entry key="secondaryPhno"  value="9287654341"></entry> 
+			</map>  
+		</constructor-arg>
+	</bean>
+	
 	<bean id="projectObject"  class="com.spring.DependencyInjection.Project">
 		<constructor-arg value="Baggage" type="String"></constructor-arg>
 		<constructor-arg value="900" type="int"></constructor-arg>
