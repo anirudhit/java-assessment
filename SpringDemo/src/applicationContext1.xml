@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="developerObject"  class="com.spring.DependencyInjection.Developer">
+		<constructor-arg value="100" type="int"></constructor-arg>
+		<constructor-arg value="John Doe" type="String"></constructor-arg>
+	</bean>
+	
+	<bean id="developerObjectPhno"  class="com.spring.DependencyInjection.Developer">
+		<constructor-arg>
+			<map>  
+				<entry key="primaryPhno"  value="8765445654"></entry>  
+				<entry key="secondaryPhno"  value="9287654341"></entry> 
+			</map>  
+		</constructor-arg>
+	</bean>
+	
+	<bean id="projectObject"  class="com.spring.DependencyInjection.Project">
+		<constructor-arg value="Baggage" type="String"></constructor-arg>
+		<constructor-arg value="900" type="int"></constructor-arg>
+	</bean>
+	
+	<bean id="projectObjectSkill"  class="com.spring.DependencyInjection.Project">
+		<constructor-arg>
+			<list>
+				<value>Spring</value>
+				<value>Angular</value>
+				<value>Java8</value>
+				<value>JavaScript</value>
+			</list>
+			
+		</constructor-arg>
+	</bean>
+</beans>
