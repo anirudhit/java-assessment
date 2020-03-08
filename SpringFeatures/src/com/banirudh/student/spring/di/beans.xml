@@ -5,18 +5,15 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    
+    <bean id="mathCheetsheetObject" class="com.banirudh.student.spring.di.MathCheatsheet"></bean>
 	<bean id="studentObject"  class="com.banirudh.student.spring.di.Student">
 		<property name="studentId" value="1208"></property>
 		<property name="studentName" value="John Doe"></property>
-		<property name="mathCheat">
-			<bean class="com.banirudh.student.spring.di.MathCheatsheet"></bean>
-		</property>
+		<property name="mathCheat" ref="mathCheetsheetObject" />
 	</bean>
 	
 	<bean id="anotherStudentObject" class="com.banirudh.student.spring.di.AnotherStudent">
-		<property name="mathCheat">
-			<bean class="com.banirudh.student.spring.di.MathCheatsheet"></bean>
-		</property>
+		<property name="mathCheat" ref="mathCheetsheetObject" />
 	</bean>
 	
 </beans>
