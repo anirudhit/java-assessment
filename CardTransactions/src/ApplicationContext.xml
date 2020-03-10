@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Defining data Source and referring it in the  -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/cardtransactions"></property>
+		<property name="username" value="root" />
+		<property name="password" value="abhijith" />
+	</bean>
+
+	<!-- Defining session factory and using it in the hibernate template -->
+	<bean id="SessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mappingResources">
+			<list>
+				<value>User.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Defining hibernate template and using it in the the DAO classes -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">  
+    	<property name="sessionFactory" ref="SessionFactory"></property>  
+    </bean>  
+    
+    
+    <!-- Defining the Dao classes -->
+    <bean id="userDao" class="com.banirudh.cards.dao.UserDao">  
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>  
+    </bean>
+    
+    <!-- Defining beans -->
+    <bean id="user" class="com.banirudh.cards.beans.User">
+		<property name="userId" value="2"></property>
+		<property name="username" value="Amanda Jones"></property>
+		<property name="password" value="password"></property>
+		<property name="email" value="amandajones@eiping.com"></property>
+		<property name="phoneNumber" value="6624329445"></property>
+	</bean>
+
+</beans>
