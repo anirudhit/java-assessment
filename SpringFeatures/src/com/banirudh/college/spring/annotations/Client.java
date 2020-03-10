@@ -10,6 +10,7 @@ public class Client {
 		System.out.println("Beans loaded...");
 		College collegeObj = context.getBean("collegeObject", College.class);
 		collegeObj.test();
+		((AnnotationConfigApplicationContext)context).close();
 	}
 
 }

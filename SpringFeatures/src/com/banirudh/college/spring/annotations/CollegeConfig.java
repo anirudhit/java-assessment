@@ -12,9 +12,15 @@ public class CollegeConfig {
 	}
 	
 	@Bean
+	public Teacher teacherObject() {
+		return new MathTeacher();
+	}
+	
+	@Bean
 	public College collegeObject() {
 		College college = new College();
 		college.setPrincipal(principalObject());
+		college.setTeacher(teacherObject());
 		return college;
 	}
 }
