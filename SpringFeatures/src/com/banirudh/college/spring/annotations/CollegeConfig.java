@@ -13,7 +13,8 @@ public class CollegeConfig {
 	
 	@Bean
 	public College collegeObject() {
-		College college = new College(principalObject());
+		College college = new College();
+		college.setPrincipal(principalObject());
 		return college;
 	}
 }

@@ -4,11 +4,10 @@ public class College {
 	
 	Principal principal;
 	
-	public College(Principal principal) {
-		super();
+	public void setPrincipal(Principal principal) {
 		this.principal = principal;
 	}
-	
+
 	public void test() {
 		principal.getPrincipalInfo();
 		System.out.println("Testing the college class method.");
