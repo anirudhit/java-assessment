@@ -13,6 +13,17 @@
         <property name="password" value="abhijith" />
     </bean>
    
+   <filter>
+    <filter-name>hibernateFilter</filter-name>
+    <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+    <init-param>
+      <param-name>singleSession</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+
+   
+   
     <!-- Hibernate session factory -->
     <bean id="sessionFactoryBean"
         class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
