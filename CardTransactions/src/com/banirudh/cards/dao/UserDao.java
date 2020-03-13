@@ -34,7 +34,7 @@ public class UserDao {
 	
 	// Delete user
 	public void deleteUser(User userObj) {
-		hibernateTemplate.delete(userObj);;
+		hibernateTemplate.delete(userObj);
 	}
 	
 	// Retrieve all users
