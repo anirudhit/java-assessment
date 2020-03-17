@@ -2,44 +2,43 @@ package com.banirudh.card.rest.repository;
 
 import java.util.List;
 
-
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.banirudh.card.rest.component.User;
-@Transactional(readOnly = false)
+
 @Repository
 public class UserDao {
 	@Autowired
-	HibernateTemplate template;
-
-	public HibernateTemplate getTemplate() {
-		return template;
-	}
-
-	public void setTemplate(HibernateTemplate template) {
-		this.template = template;
-	}
+	private SessionFactory sessionFactory;
 	
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
 	// Get all user from the database
 	public List<User> getAllUsers() {
-        List<User> users = getTemplate().loadAll(User.class);
-        for(User userObj : users)
-            System.out.println(userObj);
+		Session session = getSessionFactory().getCurrentSession();
+		List<User> users = session.createQuery("from User").list();
         return users;
     }
 	
-	// Get all user by id from the database
-	public User getUserById(int userId) {
-        User user = getTemplate().get(User.class, userId);
+	// Get user by id from the database
+	public User getUser(int id) {
+		Session session = getSessionFactory().getCurrentSession();
+		User user = (User) session.get(User.class, id);
         return user;
     }
 	
-	// Save a user
-	public User saveUser(User user) {
-		getTemplate().persist(user);
+	// Add a user
+	public User addUser(User user) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.persist(user);
 		return user;
 	}
 	

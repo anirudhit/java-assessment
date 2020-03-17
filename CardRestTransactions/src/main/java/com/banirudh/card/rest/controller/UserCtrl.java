@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.banirudh.card.rest.component.User;
-import com.banirudh.card.rest.service.UserServ;
+import com.banirudh.card.rest.service.UserService;
 
 @RestController
 public class UserCtrl {
 	
 	@Autowired
-	private UserServ userService;
+	private UserService userService;
 	
 	@RequestMapping(value="/getUsers", method=RequestMethod.GET, headers="Accept=application/json")
     public ResponseEntity<List<User>>  getUsers() {
@@ -26,25 +26,19 @@ public class UserCtrl {
         return new ResponseEntity<List<User>>(users,HttpStatus.OK);
     }
 	
-	@RequestMapping(value="/getUsersList", method=RequestMethod.GET, headers="Accept=application/json")
-    public List<User>  getUsersList() {
-        List<User> users = userService.getAllUsers();
-        return users;
-    }
-	
-	@RequestMapping(value="/getUser/{userId}", method=RequestMethod.GET, headers="Accept=application/json")
-    public ResponseEntity<User> getUserById(@PathVariable("userId") String userId) {
-        User user = userService.getUserById(Integer.parseInt(userId));
+	@RequestMapping(value="/getUser/{id}", method=RequestMethod.GET, headers="Accept=application/json")
+    public ResponseEntity<User> getUserById(@PathVariable("id") String id) {
+        User user = userService.getUser(Integer.parseInt(id));
         if(user == null) {
-        	return new ResponseEntity(HttpStatus.CONFLICT);
+        	return new ResponseEntity<User>(user,HttpStatus.CONFLICT);
         }else {
         	return new ResponseEntity<User>(user,HttpStatus.OK);
         }
     }
 	
-	@RequestMapping(value="/createUser", method=RequestMethod.POST, headers="Accept=application/json")
-    public ResponseEntity<User> saveUser(@RequestBody User userResponse) {
-		User user = userService.saveUser(userResponse);
+	@RequestMapping(value="/addUser", method=RequestMethod.POST, headers="Accept=application/json")
+    public ResponseEntity<User> addUser(@RequestBody User userRequest) {
+		User user = userService.addUser(userRequest);
 		return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 	

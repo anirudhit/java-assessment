@@ -4,24 +4,28 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.banirudh.card.rest.component.User;
 import com.banirudh.card.rest.repository.UserDao;
 
-@Service
-public class UserServ {
+@Service("userService")
+public class UserService {
 	@Autowired
 	private UserDao userDao;
 	
+	@Transactional
 	public List<User> getAllUsers(){
 		return userDao.getAllUsers();
 	}
 	
-	public User getUserById(int userId){
-		return userDao.getUserById(userId);
+	@Transactional
+	public User getUser(int userId){
+		return userDao.getUser(userId);
 	}
 	
-	public User saveUser(User user){
-		return userDao.saveUser(user);
+	@Transactional
+	public User addUser(User user){
+		return userDao.addUser(user);
 	}
 }
