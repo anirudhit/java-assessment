@@ -42,4 +42,15 @@ public class UserCtrl {
 		return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 	
+	@RequestMapping(value="/updateUser", method=RequestMethod.POST, headers="Accept=application/json")
+	public ResponseEntity<User> updateUser(@RequestBody User userRequest) {
+		User user = userService.updateUser(userRequest);
+		return new ResponseEntity<User>(user, HttpStatus.OK);
+    }
+	
+	@RequestMapping(value="/deleteUser", method=RequestMethod.POST, headers="Accept=application/json")
+	public void deleteUser(@RequestBody User userRequest) {
+		userService.deleteUser(userRequest);
+    }
+	
 }

@@ -42,5 +42,18 @@ public class UserDao {
 		return user;
 	}
 	
+	// Update a user
+	public User updateUser(User user) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.update(user);
+		return user;
+	}
+	
+	// Delete a user
+	public void deleteUser(User user) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.delete(user);
+	}
+	
 
 }

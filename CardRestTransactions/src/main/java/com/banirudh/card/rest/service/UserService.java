@@ -28,4 +28,14 @@ public class UserService {
 	public User addUser(User user){
 		return userDao.addUser(user);
 	}
+	
+	@Transactional
+	public User updateUser(User user){
+		return userDao.updateUser(user);
+	}
+	
+	@Transactional
+	public void deleteUser(User user){
+		userDao.deleteUser(user);
+	}
 }
