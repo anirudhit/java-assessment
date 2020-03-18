@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user")
@@ -19,6 +20,9 @@ public class User {
 	private String email;
 	@Column(name = "phonenumber")
 	private String phoneNumber;
+	@Transient
+	private int count;
+	
 	public int getId() {
 		return id;
 	}
@@ -49,12 +53,20 @@ public class User {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email
-				+ ", phoneNumber=" + phoneNumber + "]";
+				+ ", phoneNumber=" + phoneNumber + ", count=" + count + "]";
 	}
+	
+	
+	
 	
 }

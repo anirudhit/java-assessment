@@ -48,4 +48,5 @@
         <property name="sessionFactory" ref="sessionFactoryBean" />
     </bean>
     
+    <bean id="userObj" class="com.banirudh.card.rest.component.User"></bean>
 </beans>

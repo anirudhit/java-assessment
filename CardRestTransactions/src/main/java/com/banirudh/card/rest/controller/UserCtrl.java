@@ -20,6 +20,12 @@ public class UserCtrl {
 	@Autowired
 	private UserService userService;
 	
+	@RequestMapping(value="/getUsersCount", method=RequestMethod.GET, headers="Accept=application/json")
+    public ResponseEntity<User>  getUsersCount() {
+        User userCount = userService.getUsersCount();
+        return new ResponseEntity<User>(userCount,HttpStatus.OK);
+    }
+	
 	@RequestMapping(value="/getUsers", method=RequestMethod.GET, headers="Accept=application/json")
     public ResponseEntity<List<User>>  getUsers() {
         List<User> users = userService.getAllUsers();

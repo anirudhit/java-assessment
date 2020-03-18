@@ -15,6 +15,11 @@ public class UserService {
 	private UserDao userDao;
 	
 	@Transactional
+	public User getUsersCount(){
+		return userDao.getUsersCount();
+	}
+	
+	@Transactional
 	public List<User> getAllUsers(){
 		return userDao.getAllUsers();
 	}

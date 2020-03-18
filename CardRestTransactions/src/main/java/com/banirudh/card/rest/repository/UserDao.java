@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,12 +15,25 @@ public class UserDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	@Autowired
+	private User userCount;
+	
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
+	// Get user count
+	public User getUsersCount() {
+		Session session = getSessionFactory().getCurrentSession();
+		String hql = "SELECT count(*) AS count FROM User U";
+		Query query = session.createQuery(hql);
+		List results = query.list();
+		userCount.setCount(Integer.parseInt(results.get(0).toString()));
+		return userCount;
+    }
 
 	// Get all user from the database
 	public List<User> getAllUsers() {
