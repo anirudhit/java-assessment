@@ -30,6 +30,7 @@
         <property name="annotatedClasses">
             <array>
                 <value>com.banirudh.card.rest.component.User</value>
+                <value>com.banirudh.card.rest.component.Account</value>
             </array>
         </property>
          <property name="hibernateProperties">
