@@ -42,5 +42,15 @@ public class AccountCtrl {
 		return new ResponseEntity<Account>(account, HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/updateAccount", method=RequestMethod.POST, headers="Accept=application/json")
+	public ResponseEntity<Account> updateAccount(@RequestBody Account accountRequest){
+		Account account = accountService.updateAccount(accountRequest);
+		return new ResponseEntity<Account>(account,HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/deleteAccount", method=RequestMethod.POST, headers="Accept=application/json")
+	public void deleteAccount(@RequestBody Account accountRequest) {
+		accountService.deleteAccount(accountRequest);
+	}
 	
 }

@@ -29,4 +29,14 @@ public class AccountService {
 	public Account addAccount(Account account) {
 		return accountDao.addAccount(account);
 	}
+	
+	@Transactional
+	public Account updateAccount(Account account) {
+		return accountDao.updateAccount(account);
+	}
+	
+	@Transactional
+	public void deleteAccount(Account account) {
+		accountDao.deleteAccount(account);
+	}
 }

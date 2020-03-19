@@ -42,4 +42,17 @@ public class AccountDao {
 		session.persist(account);
 		return account;
 	}
+	
+	// Update an account
+	public Account updateAccount(Account account) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.update(account);
+		return account;
+	}
+	
+	// Delete an account
+	public void deleteAccount(Account account) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.delete(account);
+	}
 }
