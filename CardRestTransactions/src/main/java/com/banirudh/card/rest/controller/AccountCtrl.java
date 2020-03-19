@@ -20,6 +20,12 @@ public class AccountCtrl {
 	@Autowired
 	AccountService accountService;
 	
+	@RequestMapping(value="/getAccountsCount", method=RequestMethod.GET, headers="Accept=application/json")
+    public ResponseEntity<Account>  getAccountsCount() {
+        Account accountCount = accountService.getAccountsCount();
+        return new ResponseEntity<Account>(accountCount,HttpStatus.OK);
+    }
+	
 	@RequestMapping(value="/getAccounts", method=RequestMethod.GET, headers="Accept=application/json")
     public ResponseEntity<List<Account>>  getAccounts() {
         List<Account> accounts = accountService.getAllAccounts();

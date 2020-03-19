@@ -16,6 +16,11 @@ public class AccountService {
 	AccountDao accountDao;
 	
 	@Transactional
+	public Account getAccountsCount() {
+		return accountDao.getAccountsCount();
+	}
+	
+	@Transactional
 	public List<Account> getAllAccounts(){
 		return accountDao.getAllAccounts();
 	}

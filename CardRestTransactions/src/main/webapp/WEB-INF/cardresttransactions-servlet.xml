@@ -50,4 +50,5 @@
     </bean>
     
     <bean id="userObj" class="com.banirudh.card.rest.component.User"></bean>
+    <bean id="accountObj" class="com.banirudh.card.rest.component.Account"></bean>
 </beans>

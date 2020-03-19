@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "account")
@@ -17,6 +18,8 @@ public class Account {
 	private String accountType;
 	@Column(name = "user_id")
 	private int userId;
+	@Transient
+	private int count;
 	
 	public int getId() {
 		return id;
@@ -36,17 +39,23 @@ public class Account {
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
-	public int getUser_id() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUser_id(int userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	
 	@Override
 	public String toString() {
 		return "Account [id=" + id + ", accountNumber=" + accountNumber + ", accountType=" + accountType + ", userId="
-				+ userId + "]";
+				+ userId + ", count=" + count + "]";
 	}
+	
 }
