@@ -24,4 +24,9 @@ public class AccountService {
 	public Account getAccount(int id){
 		return accountDao.getAccount(id);
 	}
+	
+	@Transactional
+	public Account addAccount(Account account) {
+		return accountDao.addAccount(account);
+	}
 }

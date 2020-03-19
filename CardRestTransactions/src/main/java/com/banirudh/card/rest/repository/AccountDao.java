@@ -35,4 +35,11 @@ public class AccountDao {
 		Account account = session.get(Account.class, id);
         return account;
     }
+	
+	// Add an account
+	public Account addAccount(Account account) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.persist(account);
+		return account;
+	}
 }
