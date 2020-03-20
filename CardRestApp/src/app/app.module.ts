@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     CardModule
   ],
   providers: [],
