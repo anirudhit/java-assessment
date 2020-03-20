@@ -8,8 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class DashboardService {
 
-  // private countsUrl = '/api/CardRestTransactions/getDashboardCounts';
-  private countsUrl = 'http://localhost:8080/CardRestTransactions/getDashboardCounts';
+  private countsUrl = '/api/CardRestTransactions/getDashboardCounts';
 
   constructor(private http: HttpClient) { }
 
