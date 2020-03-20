@@ -1,1 +1,19 @@
-<p>user works!</p>
+<div class="ui-g">
+    <div class="ui-g-4">
+        <p-card header="Users count">
+            Total : {{usersCount.count}}
+        </p-card>
+    </div>
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-4" *ngFor="let user of users">
+        <p-card header="User">
+            <p>Id: {{user.id}}</p>
+            <p>User name: {{user.userName}}</p>
+            <p>Password: {{user.password}}</p>
+            <p>Email: {{user.email}}</p>
+            <p>Phone number: {{user.phoneNumber}}</p>
+        </p-card>
+    </div>
+</div>
