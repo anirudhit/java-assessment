@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { CardModule } from 'primeng/card';
+
 import { HeaderComponent } from './header/header.component';
 
 
@@ -16,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
