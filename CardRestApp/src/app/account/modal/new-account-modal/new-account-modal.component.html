@@ -1,0 +1,53 @@
+<button type="button" (click)="showModalDialog()" pButton icon="pi pi-plus-circle" label="New account"></button>
+<p-dialog header="New Account" [(visible)]="displayModal" [modal]="true" [style]="{width: '22vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+
+    <form [formGroup]="newAccountForm">
+        <div class="form-group p-2 m-2">
+            <span class="ui-float-label">
+                <input formControlName="id" id="account-id" type="text" size="45" pInputText pKeyFilter="int"> 
+                <label for="account-id">Id</label>
+            </span>
+            <div *ngIf="id.invalid && id.touched">
+                <small *ngIf="id.errors?.required" class="text-danger">Id is required</small>
+            </div>
+        </div>
+
+        <div class="form-group p-2 m-2">
+            <span class="ui-float-label">
+                <input formControlName="accountNumber" id="account-number" type="text" size="45" pInputText pKeyFilter="int"> 
+                <label for="account-number">Account number</label>
+            </span>
+            <div *ngIf="accountNumber.invalid && accountNumber.touched">
+                <small *ngIf="accountNumber.errors?.required" class="text-danger">Account number is required</small>
+            </div>
+        </div>
+
+        <div class="form-group p-2 m-2">
+            <span class="ui-float-label">
+                <input formControlName="accountType" id="account-type" type="text" size="45" pInputText pKeyFilter="alpha"> 
+                <label for="account-type">Account type</label>
+            </span>
+            <div *ngIf="accountType.invalid && accountType.touched">
+                <small *ngIf="accountType.errors?.required" class="text-danger">Account type is required</small>
+            </div>
+        </div>
+
+        <div class="form-group p-2 m-2">
+            <span class="ui-float-label">
+                <input formControlName="userId" id="account-user-id" type="text" size="45" pInputText pKeyFilter="int"> 
+                <label for="account-user-id">User id</label>
+            </span>
+            <div *ngIf="userId.invalid && userId.touched">
+                <small *ngIf="userId.errors?.required" class="text-danger">User id is required</small>
+            </div>
+        </div>
+    
+    </form>
+
+    <p-footer>
+        <button type="button" pButton icon="pi pi-check" (click)="saveAccount()" label="Save"></button>
+        <button type="button" pButton icon="pi pi-times" (click)="cancelAccount()" label="Cancel" class="ui-button-secondary"></button>
+    </p-footer>
+    
+</p-dialog>

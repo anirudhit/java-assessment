@@ -4,6 +4,11 @@
             Total : {{accountsCount.count}}
         </p-card>
     </div>
+    <div class="ui-g-4 ui-g-offset-4">
+        <div class="float-right">
+            <app-new-account-modal (accountAdded)="initCalls()"></app-new-account-modal>
+        </div>
+    </div>
 </div>
 
 <div class="ui-g">

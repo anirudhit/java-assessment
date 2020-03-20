@@ -10,6 +10,7 @@ export class AccountService {
 
   private accountsUrl = '/api/CardRestTransactions/getAccounts';
   private accountsCountUrl = '/api/CardRestTransactions/getAccountsCount';
+  private addAccountUrl = '/api/CardRestTransactions/addAccount';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,6 +20,10 @@ export class AccountService {
 
   getAccountsCount(): Observable<IAccount> {
     return this.httpClient.get<IAccount>(this.accountsCountUrl);
+  }
+
+  addAccount(account: any): Observable<IAccount> {
+    return this.httpClient.post<IAccount>(this.addAccountUrl, account);
   }
 
 }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountComponent } from './account/account.component';
+import { NewAccountModalComponent } from './account/modal/new-account-modal/new-account-modal.component';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 import { UserComponent } from './user/user.component';
 
@@ -25,6 +26,7 @@ export const RoutingComponents = [
   HomeComponent,
   DashboardComponent,
   AccountComponent,
+  NewAccountModalComponent,
   TransactionHistoryComponent,
   UserComponent
 ];
