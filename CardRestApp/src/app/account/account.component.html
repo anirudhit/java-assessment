@@ -1,1 +1,18 @@
-<p>account works!</p>
+<div class="ui-g">
+    <div class="ui-g-4">
+        <p-card header="Accounts count">
+            Total : {{accountsCount.count}}
+        </p-card>
+    </div>
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-4" *ngFor="let account of accounts">
+        <p-card header="Account">
+            <p>Id: {{account.id}}</p>
+            <p>Account number: {{account.accountNumber}}</p>
+            <p>Account type: {{account.accountType}}</p>
+            <p>User id : {{account.userId}}</p>
+        </p-card>
+    </div>
+</div>
